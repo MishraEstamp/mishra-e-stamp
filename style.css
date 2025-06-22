@@ -61,3 +61,16 @@ form button {
 form button:hover {
     background: #34495e;
 }
+.whatsapp-float {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}

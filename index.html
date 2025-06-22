@@ -6,49 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mishra E-Stamp Vendor</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleLanguage(lang) {
+            const enElements = document.querySelectorAll('.lang-en');
+            const hiElements = document.querySelectorAll('.lang-hi');
+            enElements.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+            hiElements.forEach(el => el.style.display = lang === 'hi' ? 'block' : 'none');
+        }
+    </script>
 </head>
-<body>
+<body onload="toggleLanguage('en')">
     <header>
         <h1>Mishra E-Stamp Vendor</h1>
+        <div class="lang-toggle">
+            <button onclick="toggleLanguage('en')">English</button>
+            <button onclick="toggleLanguage('hi')">हिंदी</button>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#home">Home / होम</a></li>
+                <li><a href="#about">About Us / हमारे बारे में</a></li>
+                <li><a href="#services">Services / सेवाएं</a></li>
+                <li><a href="#faq">FAQ / सामान्य प्रश्न</a></li>
+                <li><a href="#testimonials">Testimonials / समीक्षाएं</a></li>
+                <li><a href="#contact">Contact / संपर्क</a></li>
+                <li><a href="#location">Location / लोकेशन</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h2>Welcome to Mishra E-Stamp Vendor</h2>
-        <p>Your trusted partner for authorized e-stamp paper services, affidavits, and legal documentation.</p>
+        <div class="lang-en">
+            <h2>Welcome to Mishra E-Stamp Vendor</h2>
+            <p>Your trusted partner for authorized e-stamp paper services, affidavits, and legal documentation.</p>
+        </div>
+        <div class="lang-hi">
+            <h2>मिश्रा ई-स्टाम्प वेंडर में आपका स्वागत है</h2>
+            <p>अधिकृत ई-स्टाम्प पेपर सेवाओं, हलफनामों और कानूनी दस्तावेजों के लिए आपका विश्वसनीय साथी।</p>
+        </div>
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>We are a licensed vendor located in Lucknow, offering government-authorized e-stamp services, affidavit preparation, and legal document assistance.</p>
-        <p><strong>Address:</strong> Shop No. LGF 6, Milon Tower, Kursi Road, Near Gayatri Mandir, Lucknow, UP – 226022</p>
+        <div class="lang-en">
+            <h2>About Us</h2>
+            <p>We are a licensed vendor located in Lucknow, offering government-authorized e-stamp services, affidavit preparation, and legal document assistance.</p>
+            <p><strong>Address:</strong> Shop No. LGF 6, Milon Tower, Kursi Road, Near Gayatri Mandir, Lucknow, UP – 226022</p>
+        </div>
+        <div class="lang-hi">
+            <h2>हमारे बारे में</h2>
+            <p>हम लखनऊ स्थित एक लाइसेंस प्राप्त वेंडर हैं, जो सरकारी अनुमोदित ई-स्टाम्प सेवाएं, हलफनामा तैयार करना और कानूनी दस्तावेज़ सहायता प्रदान करते हैं।</p>
+            <p><strong>पता:</strong> दुकान संख्या LGF 6, मिलन टॉवर, कुर्सी रोड, गायत्री मंदिर के पास, लखनऊ, उत्तर प्रदेश – 226022</p>
+        </div>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <div class="lang-en">
+            <h2>Our Services</h2>
+            <ul>
+                <li>E-Stamp Paper Issuance (₹10 to ₹5000)</li>
+                <li>Affidavits & Declarations</li>
+                <li>Property & Rent Agreements</li>
+                <li>Notary & Attestation</li>
+                <li>Business & Legal Agreements</li>
+                <li>Power of Attorney Drafting</li>
+            </ul>
+        </div>
+        <div class="lang-hi">
+            <h2>हमारी सेवाएं</h2>
+            <ul>
+                <li>ई-स्टाम्प पेपर जारी करना (₹10 से ₹5000 तक)</li>
+                <li>हलफनामा और घोषणाएं</li>
+                <li>संपत्ति और किराया समझौते</li>
+                <li>नोटरी और सत्यापन</li>
+                <li>व्यवसायिक और कानूनी समझौते</li>
+                <li>पावर ऑफ अटॉर्नी दस्तावेज़</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ / सामान्य प्रश्न</h2>
         <ul>
-            <li>E-Stamp Paper Issuance (₹10 to ₹5000)</li>
-            <li>Affidavits & Declarations</li>
-            <li>Property & Rent Agreements</li>
-            <li>Notary & Attestation</li>
-            <li>Business & Legal Agreements</li>
-            <li>Power of Attorney Drafting</li>
+            <li><strong>Q:</strong> How long does it take to get an e-stamp?<br><strong>A:</strong> Usually within 5–10 minutes.</li>
+            <li><strong>Q:</strong> Do you offer affidavit writing?<br><strong>A:</strong> Yes, we prepare and notarize all types of affidavits.</li>
+            <li><strong>Q:</strong> क्या ई-स्टाम्प ऑनलाइन लिया जा सकता है?<br><strong>A:</strong> हां, हम ऑनलाइन ऑर्डर भी स्वीकार करते हैं।</li>
         </ul>
     </section>
 
+    <section id="testimonials">
+        <h2>Testimonials / समीक्षाएं</h2>
+        <blockquote>"Fast and reliable service. Highly recommended!" – Rajeev S.</blockquote>
+        <blockquote>"Great experience with Mishra E-Stamp. Very helpful staff." – Anita Verma</blockquote>
+    </section>
+
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>Contact Us / संपर्क करें</h2>
         <p><strong>Phone:</strong> 9335840894, 7985340278</p>
         <p><strong>Email:</strong> kumar.shubham772@gmail.com</p>
-        <form>
+        <form action="https://formsubmit.co/kumar.shubham772@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br>
             <label for="email">Email:</label><br>
@@ -60,9 +116,13 @@
     </section>
 
     <section id="location">
-        <h2>Our Location</h2>
+        <h2>Our Location / हमारा स्थान</h2>
         <iframe src="https://www.google.com/maps?q=Shop+No.+LGF+6,+Milon+Tower,+Kursi+Road,+Near+Gayatri+Mandir,+Lucknow,+UP+226022&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
+
+    <a href="https://wa.me/9335840894" class="whatsapp-float" target="_blank">
+        Chat with us on WhatsApp
+    </a>
 
     <footer>
         <p>&copy; 2025 Mishra E-Stamp Vendor. All rights reserved.</p>
