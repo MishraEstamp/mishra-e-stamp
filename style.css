@@ -16,15 +16,23 @@ header {
 header h1 {
     margin: 0;
 }
+.lang-toggle {
+    margin-top: 10px;
+}
 nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+nav ul li:hover {
+    transform: scale(1.1);
 }
 nav ul li a {
     color: white;
@@ -35,6 +43,7 @@ section {
     background: white;
     margin: 10px;
     border-radius: 8px;
+    animation: fadeInUp 0.6s ease-in-out;
 }
 footer {
     background: #2c3e50;
@@ -42,6 +51,7 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 10px;
+    animation: fadeInUp 0.8s ease-in-out;
 }
 form input, form textarea {
     width: 100%;
@@ -57,9 +67,11 @@ form button {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
 }
 form button:hover {
-    background: #34495e;
+    transform: scale(1.05);
+    background: #1abc9c;
 }
 .whatsapp-float {
     display: inline-block;
@@ -73,4 +85,17 @@ form button:hover {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
